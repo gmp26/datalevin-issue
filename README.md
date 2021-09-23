@@ -1,4 +1,4 @@
-Minimal example showing failure to require datalevin according to the docs.
+Minimal example showing failure to require datalevin according to the docs. (FIXED  BY UPDATE TO JDK16)
 
 I have tried other environments with the same result, but this one is:
 MacOS 11.5.2
@@ -9,4 +9,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.152-b16, mixed mode)
 
 deps.edn
 
-(A similar Leiningen project does the same.)
+THE ABOVE ISSUE IS RESOLVED BY UPDATING THE JDK. JDK 16 is fine. JDK 11 _probably_ works but I have not tested it yet.
+
+However... another early issue appears at database/datalevin.clj:7. 
+d/get-conn throws an error...
